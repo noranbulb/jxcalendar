@@ -1,0 +1,38 @@
+
+.jx-calendar {position: absolute;background-color: #fff;padding: 5px;border-radius: 3px;border: #d3d3d3 solid 1px;box-sizing: border-box;z-index: 1;display: none;padding: 5px 40px;}
+.jx-calendar.on {display: inline-block;}
+.jx-calendar .jxc--sun {color:#f66 !important;} /*일요일*/
+.jx-calendar .jxc--sat {color:#66f !important;} /*토요일*/
+.jx-calendar .jxc--today {color: #6a0 !important;background-color: #fcfbf2 !important;border: #fcefa1 solid 1px;content:'Today' !important;} /*오늘*/
+.jx-calendar .jxc--today:after {content:'Today' !important;} /*오늘*/
+.jx-calendar .jxc--sel {color:#40a !important;background-color:#fff !important;border-color: #99f !important;font-weight: bold;} /*선택*/
+.jx-calendar .jxc--sel:after {content:'선택' !important;} /*오늘*/
+
+.jx-calendar .jxc--start {color:#f0a !important;background-color:#fff !important;border-color: #99f !important;font-weight: bold;} /*선택*/
+.jx-calendar .jxc--start:after {content:'시작' !important;} /*시작*/
+
+.jx-calendar .jxc--end {color:#f0a !important;background-color:#fff !important;border-color: #99f !important;font-weight: bold;} /*선택*/
+.jx-calendar .jxc--end:after {content:'종료' !important;} /*엔드*/
+
+
+.jx-calendar .jxc--non {opacity:.5;}
+
+.jx-calendar-trigger-button {cursor: pointer;}
+.jx-calendar input {}
+.jx-calendar > .jx-wrap {display: inline-block;border: #eee solid 1px;background-color: #defede;padding: 5px;margin:5px;}
+.jx-calendar > .jx-wrap > .jx-control {position: relative;text-align: center;background-color: #e3e3e3;border-radius: 5px;border:#aaa solid 1px;padding: 5px 0 6px;font-family: "돋움";margin:0 auto;}
+.jx-calendar > .jx-wrap > .jx-control:after {content:'';display: inline-block;}
+.jx-calendar > .jx-wrap > .jx-control .jx-year {display: inline-block;}
+.jx-calendar > .jx-wrap > .jx-control .jx-month {display: inline-block;margin-left: 5px;}
+.jx-calendar > .jx-wrap > .jx-control select {display: inline-block;vertical-align: middle;padding: 3px 0;font-family:inherit;}
+.jx-calendar > .jx-wrap > .jx-control .jxbtns {position: absolute;top:7px;cursor: pointer;background-color: #555;border-radius: 50%;color: #fff;width: 20px;height: 20px;line-height: 20px;}
+.jx-calendar > .jx-wrap > .jx-control .jxleft {left: 5px;}
+.jx-calendar > .jx-wrap > .jx-control .jxright {right: 5px;}
+.jx-calendar > .jx-wrap > .jx-week {--font-size: 12px;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table {width: 100%;border-collapse: collapse;text-align: center;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table th {text-align: center;padding: 0;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table th span {border-bottom: #aaa solid 1px;padding-bottom: 5px;margin-bottom: 5px;display: block;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table td {padding: 2px;width:14.285%;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table td a {display: block;border-style: solid;border-color:#d3d3d3;border-width:1px;background-color: #eee;padding: 2px;cursor: pointer;color: #666;width: 40px;height: 40px;position: relative;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table td a:after {content:'';display: block;font-size: 12px;}
+.jx-calendar > .jx-wrap > .jx-week .jx-table td:hover a {background-color: #e0dcdc;}

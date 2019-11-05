@@ -1,0 +1,24 @@
+.jxcalendar-trigger-button {cursor: pointer;}
+/*.jxcalendar {width: 230px;background-color: #fff;padding: 5px;border-radius: 3px;border: #d3d3d3 solid 1px;box-sizing: border-box;}*/
+.jxcalendar {position: absolute;width: 230px;background-color: #fff;padding: 5px;border-radius: 3px;border: #d3d3d3 solid 1px;box-sizing: border-box;z-index: 1;display: none;}
+.jxcalendar.on {--display: block;}
+.jxcalendar .jxc--1 {color:#f66 !important;} /*일요일*/
+.jxcalendar .jxc--2 {color:#66f !important;} /*토요일*/
+.jxcalendar .jxc--3 {color:#6a0 !important;background-color: #fcfbf2 !important;border-color: #fcefa1 v;} /*오늘*/
+.jxcalendar .jxc--4 {color:#40a !important;background-color:#fff !important;border-color: #aaa !important; } /*선택*/
+
+.jxcalendar > input {}
+.jxcalendar > .jxcontrol {position: relative;text-align: center;background-color: #e3e3e3;border-radius: 5px;border:#aaa solid 1px;padding: 5px 0 6px;font-family: "돋움"}
+.jxcalendar > .jxcontrol .jxyear {display: inline-block;}
+.jxcalendar > .jxcontrol .jxmonth {display: inline-block;margin-left: 5px;}
+.jxcalendar > .jxcontrol select {display: inline-block;vertical-align: middle;padding: 3px 0;font-family:inherit;}
+.jxcalendar > .jxcontrol .jxbtns {position: absolute;top:7px;cursor: pointer;background-color: #555;border-radius: 50%;color: #fff;width: 20px;height: 20px;line-height: 20px;}
+.jxcalendar > .jxcontrol .jxleft {left: 5px;}
+.jxcalendar > .jxcontrol .jxright {right: 5px;}
+
+.jxcalendar > .jxweek {--font-size: 12px;}
+.jxcalendar > .jxweek .jxtable {width: 100%;border-collapse: collapse;text-align: center;}
+.jxcalendar > .jxweek .jxtable th {text-align: center;}
+.jxcalendar > .jxweek .jxtable td {padding: 2px;text-align: right;width:14.285%;}
+.jxcalendar > .jxweek .jxtable td a {display: block;border-style: solid;border-color:#d3d3d3;border-width:1px;background-color: #eee;padding: 2px;cursor: pointer;color: #666;}
+.jxcalendar > .jxweek .jxtable td:hover a {background-color: #e0dcdc;}

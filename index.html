@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>calendar</title>
+    <link rel="stylesheet" href="resources/css/jxcalendar-ver-2.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="../jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="resources/js/jxcalendar.js"></script> -->
+    <script src="resources/js/jxcalendar-ver-2.js"></script>
+
+    <meta charset="UTF-8">
+
+    <style>
+
+        .wrap {margin:0; padding: 0;}
+
+        .jx-calendar > .jx-wrap-from-2 > .jx-control, .jx-calendar > .jx-wrap-to-2 > .jx-control {position: static;}
+        .jx-calendar > .jx-wrap-from-2 > .jx-control .jxleft {left:10px;}
+        .jx-calendar > .jx-wrap-from-2 > .jx-control .jxright {right:10px;}
+        .jx-calendar > .jx-wrap-from-2 > .jx-control .jxbtns, .jx-calendar > .jx-wrap-to-2 > .jx-control .jxbtns {top:50%;transform: translateY(-50%);}
+    </style>
+
+    <script>
+    $(function(e) {
+
+
+        new JXCALENDAR(  $("#date-from-1") ,{ dayOn: true } );
+
+        var option = {
+            selectYearName: ' year'
+            , monthNamesShort: ['1 month', '2 month', '3 month', '4 month', '5 month', '6 month', '7 month', '8 month', '9 month', '10 month', '11 month', '12 month']
+        }
+        new JXCALENDAR(  $("#date-from-2"), option );
+
+        var option = {
+            headFormatShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        }
+        new JXCALENDAR(  $("#date-from-3"), option );
+
+        var option = {
+            changeYear: false
+            , changeMonth: false
+        }
+        new JXCALENDAR(  $("#date-from-4"), option );
+
+        var option = {
+            showOn: "" //input 옆에 버튼을 생성할것인가. 주석처리 하면 나타나지 않음
+        }
+        new JXCALENDAR(  $("#date-from-5"), option );
+
+        var option = {
+            buttonImageOnly: false
+        }
+        new JXCALENDAR(  $("#date-from-6"), option );
+
+        var option = {
+            numberOfMonths: 2
+        }
+        new JXCALENDAR(  $("#date-from-7"), option );
+
+        var option = {
+            yearRange: '2019:2025'
+        }
+        new JXCALENDAR(  $("#date-from-8"), option );
+
+        var option = {
+            dateFormat: 'yy년 mm월 dd일'
+        }
+        new JXCALENDAR(  $("#date-from-9"), option );
+
+        var option = {
+            buttonImage: ''
+            , buttonImageOnly: false
+            , buttonText: "선택"
+        }
+        new JXCALENDAR(  $("#date-from-10"), option );
+
+
+        var option = {
+            dayOn: true
+        }
+        new JXCALENDAR(  $("#date-from-11"), option );
+
+
+        new JXCALENDAR(  $("#from-1") );
+        new JXCALENDAR(  $("#to-1") );
+
+        var option = {
+            isTo: true
+            , numberOfMonths: 2
+        }
+        new JXCALENDAR(  $("#from-2"), option );
+
+        var option = {
+            isTo: true
+            , numberOfMonths: 3
+            , showOn: ""
+
+        }
+        new JXCALENDAR(  $("#from-3"), option );
+
+    })
+    </script>
+
+</head>
+
+<body>
+1
+<div class="wrap">
+    <ul>
+        <li>
+            <div>
+                <dl>
+                    <dt><b>한개의 캘린더를 표현할때 사용</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-1" name="date-from-1"&gt;</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-1")  );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-1" name="date-from-1"> </div>
+        </li>
+        <li>
+            <div>
+                <dl>
+                    <dt><b>상단에 년, 월 을 year, month 로 바꾸기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-2" name="date-from-2"&gt;</dd>
+                    <dd>script : var option = {selectYearName: ' year', monthNamesShort: ['1 month', '2 month', '3 month', '4 month', '5 month', '6 month', '7 month', '8 month', '9 month', '10 month', '11 month', '12 month']}</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-2"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-2" name="date-from-2"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>날짜 위에 Sun~ Sat 글자 바꾸기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-3" name="date-from-3"&gt;</dd>
+                    <dd>script : var option = { headFormatShort: ['월', '화', '수', '목', '금', '토', '일'] }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-3"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-3" name="date-from-3"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>년, 월 을 셀렉트 박스 표현 안하기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-4" name="date-from-4"&gt;</dd>
+                    <dd>script : var option = { changeYear: false, changeMonth: false }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-4"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-4" name="date-from-4"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>인풋 옆에 버튼 사용을 하지 않기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-5" name="date-from-5"&gt;</dd>
+                    <dd>script : var option = { showOn: "" }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-5"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-5" name="date-from-5"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>인풋 옆에 버튼 사용을 하는데 버튼으로 감싼 이미지 사용</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-6" name="date-from-6"&gt;</dd>
+                    <dd>script : var option = { buttonImageOnly: false }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-6"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-6" name="date-from-6"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>달력을 2개 이상 표현</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-7" name="date-from-7"&gt;</dd>
+                    <dd>script : var option = { numberOfMonths: 2 }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-7"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-7" name="date-from-7"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>년도를 언제부터 언제까지 보여줄것인가를 정한다.</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-8" name="date-from-8"&gt;</dd>
+                    <dd>script : var option = { yearRange: '2019:2025' }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-8"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-8" name="date-from-8"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>입력값 표현식을 바꾸기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-9" name="date-from-9"&gt;</dd>
+                    <dd>script : var option = { dateFormat: 'yy년mm월dd일' }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-9"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-9" name="date-from-9"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>버튼에 이미지가 아닌 원하는 텍스트 넣기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-10" name="date-from-10"&gt;</dd>
+                    <dd>script : var option = { buttonImage: '' , buttonImageOnly: false , buttonText: "선택" }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-10"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-10" name="date-from-10"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>입력 된 날짜 뒤에 요일 표시하기</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : &lt;input type="text" id="date-from-11" name="date-from-11"&gt;</dd>
+                    <dd>script : var option = { dayOn:true }</dd>
+                    <dd>script : new JXCALENDAR(  $("#date-from-11"), option );</dd>
+                </dl>
+            </div>
+            <div> <input type="text" id="date-from-11" name="date-from-10"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>인풋을 두개 사용하여 시작과 끝을 표현</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : 시작 : &lt;input type="text" id="from-1" name="from-1" data-to="to-1" data-table="table-1"&gt; - 종료 : &lt;input type="text" id="to-1" name="to-1" data-to="from-1" data-table="table-1"&gt; </dd>
+                    <dd>시작과 종료 input은 data-to에 상대의 id와 같은 값(*중요)을 넣고 data-table(*중요)은 같은 테이블 글자를 넣어야 한다.</dd>
+                    <dd>script : new JXCALENDAR(  $("#from-1") );</dd>
+                    <dd>script : new JXCALENDAR(  $("#to-1") );</dd>
+                </dl>
+            </div>
+            <div>시작 : <input type="text" id="from-1" name="from-1" data-to="to-1" data-table="table-1">
+                  - 종료 : <input type="text" id="to-1" name="to-1" data-to="from-1" data-table="table-1"> </div>
+        </li>
+
+        <li>
+            <div>
+                <dl>
+                    <dt><b>인풋을 한개 사용, 시작과 끝을 표현, 버튼 사용, 달력을 2개씩 뿌려주기, 버튼 사용 안함</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : 시작 : &lt;input type="text" id="from-2" name="from-2" data-table="table-2"&gt; </dd>
+                    <dd>input에  data-to 설정을(*중요)하지 않아야 하며 data-table(*중요)은 은 꼭 넣어야하는데 다른 input에 없는 값을 넣어야한다.</dd>
+                    <dd>script : var option = {isTo: true, numberOfMonths: 2}</dd>
+                    <dd>script : new JXCALENDAR(  $("#from-2"), option );</dd>
+                </dl>
+            </div>
+            <div><input type="text" id="from-2" name="from-2" data-table="table-2"></div>
+        </li>
+        <li>
+            <div>
+                <dl>
+                    <dt><b>인풋을 한개 사용, 시작과 끝을 표현, 달력을 3개씩 뿌려주기, 버튼 사용 안함</b></dt>
+                </dl>
+                <dl>
+                    <dt>사용법</dt>
+                    <dd>html : 시작 : &lt;input type="text" id="from-3" name="from-3" data-table="table-3"&gt; </dd>
+                    <dd>input에  data-to 설정을(*중요)하지 않아야 하며 data-table(*중요)은 은 꼭 넣어야하는데 다른 input에 없는 값을 넣어야한다..</dd>
+                    <dd>script : var option = {isTo: true, numberOfMonths: 3, showOn: ""}</dd>
+                    <dd>script : new JXCALENDAR(  $("#from-3"), option );</dd>
+                </dl>
+            </div>
+            <div><input type="text" id="from-3" name="from-3" data-table="table-3"></div>
+        </li>
+
+    </ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
